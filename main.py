@@ -31,10 +31,18 @@ def motor_stop():
 
 try:
     # 모터 작동 예제
+    
     motor_forward()  # 모터를 전진 시킴
-    time.sleep(2)    # 2초 동안 전진
-    motor_backward() # 모터를 후진 시킴
-    time.sleep(2)    # 2초 동안 후진
+    time.sleep(1.0) 
+    motor_stop()
+    time.sleep(0.5)
+
+
+    motor_backward()
+
+    time.sleep(1.2)    # 2초 동안 전진
+     # 모터를 후진 시킴
+        # 2초 동안 후진
     motor_stop()     # 모터를 정지
 finally:
     GPIO.cleanup()  # GPIO 핀 초기화
